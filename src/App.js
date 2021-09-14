@@ -13,12 +13,12 @@ function App() {
                 <div className="Composition">
                     <h3 id="Blue_Compo_title">Blue Team Composition</h3>
 
-                    <img alt="Blue Team 1st Champion" className="Champion champ-1 blue" src="Utilities/Placeholder.png"/>
-                    <img alt="Blue Team 2nd Champion" className="Champion champ-2 blue" src="Utilities/Placeholder.png"/>
-                    <img alt="Blue Team 3rd Champion" className="Champion champ-3 blue" src="Utilities/Placeholder.png"/>
-                    <img alt="Blue Team 4th Champion" className="Champion champ-4 blue" src="Utilities/Placeholder.png"/>
-                    <img alt="Blue Team 5th Champion" className="Champion champ-5 blue" src="Utilities/Placeholder.png"/>
-                    <img alt="Blue Team 6th Champion" className="Champion champ-6 blue" src="Utilities/Placeholder.png"/>
+                    <img alt="Blue Team 1st Champion" className="Champion champ-1 blue" src="Utilities/placeholder.png"/>
+                    <img alt="Blue Team 2nd Champion" className="Champion champ-2 blue" src="Utilities/placeholder.png"/>
+                    <img alt="Blue Team 3rd Champion" className="Champion champ-3 blue" src="Utilities/placeholder.png"/>
+                    <img alt="Blue Team 4th Champion" className="Champion champ-4 blue" src="Utilities/placeholder.png"/>
+                    <img alt="Blue Team 5th Champion" className="Champion champ-5 blue" src="Utilities/placeholder.png"/>
+                    <img alt="Blue Team 6th Champion" className="Champion champ-6 blue" src="Utilities/placeholder.png"/>
                 </div>
 
                 <div className="Tank">
@@ -73,12 +73,12 @@ function App() {
                 <div className="Composition">
                     <h3 id="Red_Compo_title">Red Team Composition</h3>
 
-                    <img alt="Red Team 1st Champion" className="Champion champ-1 red" src="Utilities/Placeholder.png"/>
-                    <img alt="Red Team 2nd Champion" className="Champion champ-2 red" src="Utilities/Placeholder.png"/>
-                    <img alt="Red Team 3rd Champion" className="Champion champ-3 red" src="Utilities/Placeholder.png"/>
-                    <img alt="Red Team 4th Champion" className="Champion champ-4 red" src="Utilities/Placeholder.png"/>
-                    <img alt="Red Team 5th Champion" className="Champion champ-5 red" src="Utilities/Placeholder.png"/>
-                    <img alt="Red Team 6th Champion" className="Champion champ-6 red" src="Utilities/Placeholder.png"/>
+                    <img alt="Red Team 1st Champion" className="Champion champ-1 red" src="Utilities/placeholder.png"/>
+                    <img alt="Red Team 2nd Champion" className="Champion champ-2 red" src="Utilities/placeholder.png"/>
+                    <img alt="Red Team 3rd Champion" className="Champion champ-3 red" src="Utilities/placeholder.png"/>
+                    <img alt="Red Team 4th Champion" className="Champion champ-4 red" src="Utilities/placeholder.png"/>
+                    <img alt="Red Team 5th Champion" className="Champion champ-5 red" src="Utilities/placeholder.png"/>
+                    <img alt="Red Team 6th Champion" className="Champion champ-6 red" src="Utilities/placeholder.png"/>
                 </div>
 
                 <div className="Tank">
