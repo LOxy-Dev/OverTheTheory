@@ -10,6 +10,17 @@ function App() {
 
         <div id="Comps">
             <div className="CompTeam blue">
+                <div className="Composition">
+                    <h3 id="Blue_Compo_title">Blue Team Composition</h3>
+
+                    <img className="Champion champ-1 blue"/>
+                    <img className="Champion champ-2 blue"/>
+                    <img className="Champion champ-3 blue"/>
+                    <img className="Champion champ-4 blue"/>
+                    <img className="Champion champ-5 blue"/>
+                    <img className="Champion champ-6 blue"/>
+                </div>
+
                 <div className="Tank">
                     <h3 className="Tank-Title">Tank</h3>
 
@@ -57,7 +68,19 @@ function App() {
                     <img className="Champion" src="Hero-icons/zenyatta-icon.png"/>
                 </div>
             </div>
+
             <div className="CompTeam red">
+                <div className="Composition">
+                    <h3 id="Red_Compo_title">Red Team Composition</h3>
+
+                    <img className="Champion champ-1 red"/>
+                    <img className="Champion champ-2 red"/>
+                    <img className="Champion champ-3 red"/>
+                    <img className="Champion champ-4 red"/>
+                    <img className="Champion champ-5 red"/>
+                    <img className="Champion champ-6 red"/>
+                </div>
+
                 <div className="Tank">
                     <h3 className="Tank-Title">Tank</h3>
 

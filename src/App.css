@@ -24,6 +24,18 @@
   flex-direction: column;
 }
 
+#Blue_Compo_title {
+  color: dodgerblue;
+}
+
+#Red_Compo_title {
+  color: red;
+}
+
+.Composition {
+  margin-bottom: 30px;
+}
+
 .Champion {
   margin: 5px;
   height: 80px;
