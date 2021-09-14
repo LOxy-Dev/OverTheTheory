@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/OverTheTheory/static/css/main.8a861d42.chunk.css",
-    "main.js": "/OverTheTheory/static/js/main.75b988fa.chunk.js",
-    "main.js.map": "/OverTheTheory/static/js/main.75b988fa.chunk.js.map",
+    "main.css": "/OverTheTheory/static/css/main.2a2037a9.chunk.css",
+    "main.js": "/OverTheTheory/static/js/main.aab49ca3.chunk.js",
+    "main.js.map": "/OverTheTheory/static/js/main.aab49ca3.chunk.js.map",
     "runtime-main.js": "/OverTheTheory/static/js/runtime-main.a84a47de.js",
     "runtime-main.js.map": "/OverTheTheory/static/js/runtime-main.a84a47de.js.map",
     "static/js/2.de42dcf4.chunk.js": "/OverTheTheory/static/js/2.de42dcf4.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.5283cef9.chunk.js": "/OverTheTheory/static/js/3.5283cef9.chunk.js",
     "static/js/3.5283cef9.chunk.js.map": "/OverTheTheory/static/js/3.5283cef9.chunk.js.map",
     "index.html": "/OverTheTheory/index.html",
-    "static/css/main.8a861d42.chunk.css.map": "/OverTheTheory/static/css/main.8a861d42.chunk.css.map",
+    "static/css/main.2a2037a9.chunk.css.map": "/OverTheTheory/static/css/main.2a2037a9.chunk.css.map",
     "static/js/2.de42dcf4.chunk.js.LICENSE.txt": "/OverTheTheory/static/js/2.de42dcf4.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/OverTheTheory/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.a84a47de.js",
     "static/js/2.de42dcf4.chunk.js",
-    "static/css/main.8a861d42.chunk.css",
-    "static/js/main.75b988fa.chunk.js"
+    "static/css/main.2a2037a9.chunk.css",
+    "static/js/main.aab49ca3.chunk.js"
   ]
 }
