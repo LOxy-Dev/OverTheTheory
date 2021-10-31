@@ -1,6 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
-import React, {Component} from "react";
+import React from "react";
+
+for (let icon in document.getElementsByClassName("Champion")) {
+    icon.addEventListener('click', iconClicked(icon));
+}
+
+function iconClicked(element) {
+    let first_picks = document.getElementsByClassName("champ-1");
+
+    for (var firstPicksKey in first_picks) {
+        if (firstPicksKey.classList.contains("blue")) {
+            first_picks = element
+        }
+    }
+}
 
 function App() {
   return (
@@ -44,7 +57,7 @@ function App() {
                     <img alt="Genji" className="Champion" src="Hero-icons/genji-icon.png"/>
                     <img alt="Hanzo" className="Champion" src="Hero-icons/hanzo-icon.png"/>
                     <img alt="Junkrat" className="Champion" src="Hero-icons/junkrat-icon.png"/>
-                    <img alt="Mccree" className="Champion" src="Hero-icons/mccree-icon.png"/>
+                    <img alt="Cassidy" className="Champion" src="Hero-icons/cassidy-icon.png"/>
                     <img alt="Mei" className="Champion" src="Hero-icons/mei-icon.png"/>
                     <img alt="Pharah" className="Champion" src="Hero-icons/pharah-icon.png"/>
                     <img alt="Reaper" className="Champion" src="Hero-icons/reaper-icon.png"/>
@@ -104,7 +117,7 @@ function App() {
                     <img alt="Genji" className="Champion" src="Hero-icons/genji-icon.png"/>
                     <img alt="Hanzo" className="Champion" src="Hero-icons/hanzo-icon.png"/>
                     <img alt="Junkrat" className="Champion" src="Hero-icons/junkrat-icon.png"/>
-                    <img alt="Mccree" className="Champion" src="Hero-icons/mccree-icon.png"/>
+                    <img alt="Cassidy" className="Champion" src="Hero-icons/cassidy-icon.png"/>
                     <img alt="Mei" className="Champion" src="Hero-icons/mei-icon.png"/>
                     <img alt="Pharah" className="Champion" src="Hero-icons/pharah-icon.png"/>
                     <img alt="Reaper" className="Champion" src="Hero-icons/reaper-icon.png"/>
