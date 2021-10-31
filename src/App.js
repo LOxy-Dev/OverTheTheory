@@ -1,17 +1,29 @@
 import './App.css';
 import React from "react";
 
-for (let icon in document.getElementsByClassName("Champion")) {
-    icon.addEventListener('click', iconClicked(icon));
-}
+let blue_pick_number = 1;
+let red_pick_number = 1;
 
 function iconClicked(element) {
-    let first_picks = document.getElementsByClassName("champ-1");
+    if (element.target.classList.contains("blue")) {
+        // Get the class to find the element
+        let class_to_find = "champ-"+blue_pick_number+" blue";
+        // Get and configure the element
+        let champ = document.getElementsByClassName(class_to_find).item(0);
+        champ.src = element.target.src;
+        champ.classList.add("Selected");
 
-    for (var firstPicksKey in first_picks) {
-        if (firstPicksKey.classList.contains("blue")) {
-            first_picks = element
-        }
+        blue_pick_number ++;
+    }
+    else if (element.target.classList.contains("red")) {
+        // Get the class to find the element
+        let class_to_find = "champ-"+red_pick_number+" red";
+        // Get and configure the element
+        let champ = document.getElementsByClassName(class_to_find).item(0);
+        champ.src = element.target.src;
+        champ.classList.add("Selected");
+
+        red_pick_number ++;
     }
 }
 
@@ -26,59 +38,59 @@ function App() {
                 <div className="Composition">
                     <h3 id="Blue_Compo_title">Blue Team Composition</h3>
 
-                    <img alt="Blue Team 1st Champion" className="Champion champ-1 blue" src="Utilities/placeholder.png"/>
-                    <img alt="Blue Team 2nd Champion" className="Champion champ-2 blue" src="Utilities/placeholder.png"/>
-                    <img alt="Blue Team 3rd Champion" className="Champion champ-3 blue" src="Utilities/placeholder.png"/>
-                    <img alt="Blue Team 4th Champion" className="Champion champ-4 blue" src="Utilities/placeholder.png"/>
-                    <img alt="Blue Team 5th Champion" className="Champion champ-5 blue" src="Utilities/placeholder.png"/>
-                    <img alt="Blue Team 6th Champion" className="Champion champ-6 blue" src="Utilities/placeholder.png"/>
+                    <img alt="Blue Team 1st Champion" className="Champion champ-1 blue" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Blue Team 2nd Champion" className="Champion champ-2 blue" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Blue Team 3rd Champion" className="Champion champ-3 blue" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Blue Team 4th Champion" className="Champion champ-4 blue" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Blue Team 5th Champion" className="Champion champ-5 blue" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Blue Team 6th Champion" className="Champion champ-6 blue" src="Utilities/placeholder.png" onClick={iconClicked}/>
                 </div>
 
                 <div className="Tank">
                     <h3 className="Tank-Title">Tank</h3>
 
-                    <img alt="D.Va" className="Champion" src="Hero-icons/dva-icon.png"/>
-                    <img alt="Orisa" className="Champion" src="Hero-icons/orisa-icon.png"/>
-                    <img alt="Reinhardt" className="Champion" src="Hero-icons/reinhardt-icon.png"/>
-                    <img alt="Roadhog" className="Champion" src="Hero-icons/roadhog-icon.png"/>
-                    <img alt="Sigma" className="Champion" src="Hero-icons/sigma-icon.png"/>
-                    <img alt="Winston" className="Champion" src="Hero-icons/winston-icon.png"/>
-                    <img alt="Wrecking Ball" className="Champion" src="Hero-icons/wreckingball-icon.png"/>
-                    <img alt="Zarya" className="Champion" src="Hero-icons/zarya-icon.png"/>
+                    <img alt="D.Va" className="Champion blue" src="Hero-icons/dva-icon.png" onClick={iconClicked}/>
+                    <img alt="Orisa" className="Champion blue" src="Hero-icons/orisa-icon.png" onClick={iconClicked}/>
+                    <img alt="Reinhardt" className="Champion blue" src="Hero-icons/reinhardt-icon.png" onClick={iconClicked}/>
+                    <img alt="Roadhog" className="Champion blue" src="Hero-icons/roadhog-icon.png" onClick={iconClicked}/>
+                    <img alt="Sigma" className="Champion blue" src="Hero-icons/sigma-icon.png" onClick={iconClicked}/>
+                    <img alt="Winston" className="Champion blue" src="Hero-icons/winston-icon.png" onClick={iconClicked}/>
+                    <img alt="Wrecking Ball" className="Champion blue" src="Hero-icons/wreckingball-icon.png" onClick={iconClicked}/>
+                    <img alt="Zarya" className="Champion blue" src="Hero-icons/zarya-icon.png" onClick={iconClicked}/>
                 </div>
 
                 <div className="Damage">
                     <h3 className="Damage-title">DPS</h3>
 
-                    <img alt="Ashe" className="Champion" src="Hero-icons/ashe-icon.png"/>
-                    <img alt="Bastion" className="Champion" src="Hero-icons/bastion-icon.png"/>
-                    <img alt="Doomfist" className="Champion" src="Hero-icons/doomfist-icon.png"/>
-                    <img alt="Echo" className="Champion" src="Hero-icons/echo-icon.webp"/>
-                    <img alt="Genji" className="Champion" src="Hero-icons/genji-icon.png"/>
-                    <img alt="Hanzo" className="Champion" src="Hero-icons/hanzo-icon.png"/>
-                    <img alt="Junkrat" className="Champion" src="Hero-icons/junkrat-icon.png"/>
-                    <img alt="Cassidy" className="Champion" src="Hero-icons/cassidy-icon.png"/>
-                    <img alt="Mei" className="Champion" src="Hero-icons/mei-icon.png"/>
-                    <img alt="Pharah" className="Champion" src="Hero-icons/pharah-icon.png"/>
-                    <img alt="Reaper" className="Champion" src="Hero-icons/reaper-icon.png"/>
-                    <img alt="Soldier 76" className="Champion" src="Hero-icons/soldier76-icon.png"/>
-                    <img alt="Sombra" className="Champion" src="Hero-icons/sombra-icon.png"/>
-                    <img alt="Symmetra" className="Champion" src="Hero-icons/symmetra-icon.png"/>
-                    <img alt="Torbjorn" className="Champion" src="Hero-icons/torbjorn-icon.png"/>
-                    <img alt="Tracer" className="Champion" src="Hero-icons/tracer-icon.png"/>
-                    <img alt="Widowmaker" className="Champion" src="Hero-icons/widowmaker-icon.png"/>
+                    <img alt="Ashe" className="Champion blue" src="Hero-icons/ashe-icon.png" onClick={iconClicked}/>
+                    <img alt="Bastion" className="Champion blue" src="Hero-icons/bastion-icon.png" onClick={iconClicked}/>
+                    <img alt="Doomfist" className="Champion blue" src="Hero-icons/doomfist-icon.png" onClick={iconClicked}/>
+                    <img alt="Echo" className="Champion blue" src="Hero-icons/echo-icon.webp" onClick={iconClicked}/>
+                    <img alt="Genji" className="Champion blue" src="Hero-icons/genji-icon.png" onClick={iconClicked}/>
+                    <img alt="Hanzo" className="Champion blue" src="Hero-icons/hanzo-icon.png" onClick={iconClicked}/>
+                    <img alt="Junkrat" className="Champion blue" src="Hero-icons/junkrat-icon.png" onClick={iconClicked}/>
+                    <img alt="Cassidy" className="Champion blue" src="Hero-icons/cassidy-icon.png" onClick={iconClicked}/>
+                    <img alt="Mei" className="Champion blue" src="Hero-icons/mei-icon.png" onClick={iconClicked}/>
+                    <img alt="Pharah" className="Champion blue" src="Hero-icons/pharah-icon.png" onClick={iconClicked}/>
+                    <img alt="Reaper" className="Champion blue" src="Hero-icons/reaper-icon.png" onClick={iconClicked}/>
+                    <img alt="Soldier 76" className="Champion blue" src="Hero-icons/soldier76-icon.png" onClick={iconClicked}/>
+                    <img alt="Sombra" className="Champion blue" src="Hero-icons/sombra-icon.png" onClick={iconClicked}/>
+                    <img alt="Symmetra" className="Champion blue" src="Hero-icons/symmetra-icon.png" onClick={iconClicked}/>
+                    <img alt="Torbjorn" className="Champion blue" src="Hero-icons/torbjorn-icon.png" onClick={iconClicked}/>
+                    <img alt="Tracer" className="Champion blue" src="Hero-icons/tracer-icon.png" onClick={iconClicked}/>
+                    <img alt="Widowmaker" className="Champion blue" src="Hero-icons/widowmaker-icon.png" onClick={iconClicked}/>
                 </div>
 
                 <div className="Support">
                     <h3 className={"Support-title"}>Support</h3>
 
-                    <img alt="Ana" className="Champion" src="Hero-icons/ana-icon.png"/>
-                    <img alt="Baptiste" className="Champion" src="Hero-icons/baptiste-icon.png"/>
-                    <img alt="Brigitte" className="Champion" src="Hero-icons/brigitte-icon.png"/>
-                    <img alt="Lucio" className="Champion" src="Hero-icons/lucio-icon.png"/>
-                    <img alt="Mercy" className="Champion" src="Hero-icons/mercy-icon.png"/>
-                    <img alt="Moira" className="Champion" src="Hero-icons/moira-icon.png"/>
-                    <img alt="Zenyatta" className="Champion" src="Hero-icons/zenyatta-icon.png"/>
+                    <img alt="Ana" className="Champion blue" src="Hero-icons/ana-icon.png" onClick={iconClicked}/>
+                    <img alt="Baptiste" className="Champion blue" src="Hero-icons/baptiste-icon.png" onClick={iconClicked}/>
+                    <img alt="Brigitte" className="Champion blue" src="Hero-icons/brigitte-icon.png" onClick={iconClicked}/>
+                    <img alt="Lucio" className="Champion blue" src="Hero-icons/lucio-icon.png" onClick={iconClicked}/>
+                    <img alt="Mercy" className="Champion blue" src="Hero-icons/mercy-icon.png" onClick={iconClicked}/>
+                    <img alt="Moira" className="Champion blue" src="Hero-icons/moira-icon.png" onClick={iconClicked}/>
+                    <img alt="Zenyatta" className="Champion blue" src="Hero-icons/zenyatta-icon.png" onClick={iconClicked}/>
                 </div>
             </div>
 
@@ -86,59 +98,59 @@ function App() {
                 <div className="Composition">
                     <h3 id="Red_Compo_title">Red Team Composition</h3>
 
-                    <img alt="Red Team 1st Champion" className="Champion champ-1 red" src="Utilities/placeholder.png"/>
-                    <img alt="Red Team 2nd Champion" className="Champion champ-2 red" src="Utilities/placeholder.png"/>
-                    <img alt="Red Team 3rd Champion" className="Champion champ-3 red" src="Utilities/placeholder.png"/>
-                    <img alt="Red Team 4th Champion" className="Champion champ-4 red" src="Utilities/placeholder.png"/>
-                    <img alt="Red Team 5th Champion" className="Champion champ-5 red" src="Utilities/placeholder.png"/>
-                    <img alt="Red Team 6th Champion" className="Champion champ-6 red" src="Utilities/placeholder.png"/>
+                    <img alt="Red Team 1st Champion" className="Champion champ-1 red" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Red Team 2nd Champion" className="Champion champ-2 red" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Red Team 3rd Champion" className="Champion champ-3 red" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Red Team 4th Champion" className="Champion champ-4 red" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Red Team 5th Champion" className="Champion champ-5 red" src="Utilities/placeholder.png" onClick={iconClicked}/>
+                    <img alt="Red Team 6th Champion" className="Champion champ-6 red" src="Utilities/placeholder.png" onClick={iconClicked}/>
                 </div>
 
                 <div className="Tank">
                     <h3 className="Tank-Title">Tank</h3>
 
-                    <img alt="D.Va" className="Champion" src="Hero-icons/dva-icon.png"/>
-                    <img alt="Orisa" className="Champion" src="Hero-icons/orisa-icon.png"/>
-                    <img alt="Reinhardt" className="Champion" src="Hero-icons/reinhardt-icon.png"/>
-                    <img alt="Roadhog" className="Champion" src="Hero-icons/roadhog-icon.png"/>
-                    <img alt="Sigma" className="Champion" src="Hero-icons/sigma-icon.png"/>
-                    <img alt="Winston" className="Champion" src="Hero-icons/winston-icon.png"/>
-                    <img alt="Wrecking Ball" className="Champion" src="Hero-icons/wreckingball-icon.png"/>
-                    <img alt="Zarya" className="Champion" src="Hero-icons/zarya-icon.png"/>
+                    <img alt="D.Va" className="Champion red" src="Hero-icons/dva-icon.png" onClick={iconClicked}/>
+                    <img alt="Orisa" className="Champion red" src="Hero-icons/orisa-icon.png" onClick={iconClicked}/>
+                    <img alt="Reinhardt" className="Champion red" src="Hero-icons/reinhardt-icon.png" onClick={iconClicked}/>
+                    <img alt="Roadhog" className="Champion red" src="Hero-icons/roadhog-icon.png" onClick={iconClicked}/>
+                    <img alt="Sigma" className="Champion red" src="Hero-icons/sigma-icon.png" onClick={iconClicked}/>
+                    <img alt="Winston" className="Champion red" src="Hero-icons/winston-icon.png" onClick={iconClicked}/>
+                    <img alt="Wrecking Ball" className="Champion red" src="Hero-icons/wreckingball-icon.png" onClick={iconClicked}/>
+                    <img alt="Zarya" className="Champion red" src="Hero-icons/zarya-icon.png" onClick={iconClicked}/>
                 </div>
 
                 <div className="Damage">
                     <h3 className="Damage-title">DPS</h3>
 
-                    <img alt="Ashe" className="Champion" src="Hero-icons/ashe-icon.png"/>
-                    <img alt="Bastion" className="Champion" src="Hero-icons/bastion-icon.png"/>
-                    <img alt="Doomfist" className="Champion" src="Hero-icons/doomfist-icon.png"/>
-                    <img alt="Echo" className="Champion" src="Hero-icons/echo-icon.webp"/>
-                    <img alt="Genji" className="Champion" src="Hero-icons/genji-icon.png"/>
-                    <img alt="Hanzo" className="Champion" src="Hero-icons/hanzo-icon.png"/>
-                    <img alt="Junkrat" className="Champion" src="Hero-icons/junkrat-icon.png"/>
-                    <img alt="Cassidy" className="Champion" src="Hero-icons/cassidy-icon.png"/>
-                    <img alt="Mei" className="Champion" src="Hero-icons/mei-icon.png"/>
-                    <img alt="Pharah" className="Champion" src="Hero-icons/pharah-icon.png"/>
-                    <img alt="Reaper" className="Champion" src="Hero-icons/reaper-icon.png"/>
-                    <img alt="Soldier 76" className="Champion" src="Hero-icons/soldier76-icon.png"/>
-                    <img alt="Sombra" className="Champion" src="Hero-icons/sombra-icon.png"/>
-                    <img alt="Symmetra" className="Champion" src="Hero-icons/symmetra-icon.png"/>
-                    <img alt="Torbjorn" className="Champion" src="Hero-icons/torbjorn-icon.png"/>
-                    <img alt="Tracer" className="Champion" src="Hero-icons/tracer-icon.png"/>
-                    <img alt="Widowmaker" className="Champion" src="Hero-icons/widowmaker-icon.png"/>
+                    <img alt="Ashe" className="Champion red" src="Hero-icons/ashe-icon.png" onClick={iconClicked}/>
+                    <img alt="Bastion" className="Champion red" src="Hero-icons/bastion-icon.png" onClick={iconClicked}/>
+                    <img alt="Doomfist" className="Champion red" src="Hero-icons/doomfist-icon.png" onClick={iconClicked}/>
+                    <img alt="Echo" className="Champion red" src="Hero-icons/echo-icon.webp" onClick={iconClicked}/>
+                    <img alt="Genji" className="Champion red" src="Hero-icons/genji-icon.png" onClick={iconClicked}/>
+                    <img alt="Hanzo" className="Champion red" src="Hero-icons/hanzo-icon.png" onClick={iconClicked}/>
+                    <img alt="Junkrat" className="Champion red" src="Hero-icons/junkrat-icon.png" onClick={iconClicked}/>
+                    <img alt="Cassidy" className="Champion red" src="Hero-icons/cassidy-icon.png" onClick={iconClicked}/>
+                    <img alt="Mei" className="Champion red" src="Hero-icons/mei-icon.png" onClick={iconClicked}/>
+                    <img alt="Pharah" className="Champion red" src="Hero-icons/pharah-icon.png" onClick={iconClicked}/>
+                    <img alt="Reaper" className="Champion red" src="Hero-icons/reaper-icon.png" onClick={iconClicked}/>
+                    <img alt="Soldier 76" className="Champion red" src="Hero-icons/soldier76-icon.png" onClick={iconClicked}/>
+                    <img alt="Sombra" className="Champion red" src="Hero-icons/sombra-icon.png" onClick={iconClicked}/>
+                    <img alt="Symmetra" className="Champion red" src="Hero-icons/symmetra-icon.png" onClick={iconClicked}/>
+                    <img alt="Torbjorn" className="Champion red" src="Hero-icons/torbjorn-icon.png" onClick={iconClicked}/>
+                    <img alt="Tracer" className="Champion red" src="Hero-icons/tracer-icon.png" onClick={iconClicked}/>
+                    <img alt="Widowmaker" className="Champion red" src="Hero-icons/widowmaker-icon.png" onClick={iconClicked}/>
                 </div>
 
                 <div className="Support">
                     <h3 className={"Support-title"}>Support</h3>
 
-                    <img alt="Ana" className="Champion" src="Hero-icons/ana-icon.png"/>
-                    <img alt="Baptiste" className="Champion" src="Hero-icons/baptiste-icon.png"/>
-                    <img alt="Brigitte" className="Champion" src="Hero-icons/brigitte-icon.png"/>
-                    <img alt="Lucio" className="Champion" src="Hero-icons/lucio-icon.png"/>
-                    <img alt="Mercy" className="Champion" src="Hero-icons/mercy-icon.png"/>
-                    <img alt="Moira" className="Champion" src="Hero-icons/moira-icon.png"/>
-                    <img alt="Zenyatta" className="Champion" src="Hero-icons/zenyatta-icon.png"/>
+                    <img alt="Ana" className="Champion red" src="Hero-icons/ana-icon.png" onClick={iconClicked}/>
+                    <img alt="Baptiste" className="Champion red" src="Hero-icons/baptiste-icon.png" onClick={iconClicked}/>
+                    <img alt="Brigitte" className="Champion red" src="Hero-icons/brigitte-icon.png" onClick={iconClicked}/>
+                    <img alt="Lucio" className="Champion red" src="Hero-icons/lucio-icon.png" onClick={iconClicked}/>
+                    <img alt="Mercy" className="Champion red" src="Hero-icons/mercy-icon.png" onClick={iconClicked}/>
+                    <img alt="Moira" className="Champion red" src="Hero-icons/moira-icon.png" onClick={iconClicked}/>
+                    <img alt="Zenyatta" className="Champion red" src="Hero-icons/zenyatta-icon.png" onClick={iconClicked}/>
                 </div>
             </div>
         </div>
