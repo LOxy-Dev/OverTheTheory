@@ -18,14 +18,14 @@ function championSelect(element) {
 
         blue_pick_number++;
     } else if (element.target.classList.contains("red") && red_pick_number > 0 && red_pick_number <= 6) {
-            // Get the class to find the element
-            let class_to_find = "champ-" + red_pick_number + " red";
-            // Get and configure the element
-            let champ = document.getElementsByClassName(class_to_find).item(0);
-            champ.src = element.target.src;
-            champ.classList.add("Selected");
+        // Get the class to find the element
+        let class_to_find = "champ-" + red_pick_number + " red";
+        // Get and configure the element
+        let champ = document.getElementsByClassName(class_to_find).item(0);
+        champ.src = element.target.src;
+        champ.classList.add("Selected");
 
-            red_pick_number++;
+        red_pick_number++;
     }
 
     element.target.classList.add("Selected");
