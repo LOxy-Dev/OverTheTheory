@@ -35,13 +35,30 @@ function championUnselect(element) {
     if (!element.target.classList.contains("Selected"))
         return;
 
+    let slots;
+    let last_slot_src = "Utilities/placeholder.png";
+
     if (element.target.classList.contains("blue")) {
+        slots = document.getElementsByClassName("champ-slot blue")
         blue_pick_number --;
     } else if (element.target.classList.contains("red")) {
+        slots = document.getElementsByClassName("champ-slot red")
         red_pick_number --;
     }
-    element.target.src = "Utilities/placeholder.png";
-    element.target.classList.remove("Selected");
+
+    // Move all icons to the left
+    for (let i = 5; i>0; i--) {
+        let a = slots.item(i).src;
+        slots.item(i).src = last_slot_src;
+        last_slot_src = a;
+
+        if (element.target === slots.item(i)) {
+            break;
+        }
+    }
+
+    // Reset
+    slots.item(0).classList.remove("Selected");
 }
 
 function App() {
@@ -55,12 +72,12 @@ function App() {
                 <div className="Composition">
                     <h3 id="Blue_Compo_title">Blue Team Composition</h3>
 
-                    <img alt="Blue Team 1st Champion" className="Champion champ-1 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Blue Team 2nd Champion" className="Champion champ-2 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Blue Team 3rd Champion" className="Champion champ-3 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Blue Team 4th Champion" className="Champion champ-4 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Blue Team 5th Champion" className="Champion champ-5 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Blue Team 6th Champion" className="Champion champ-6 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Blue Team 1st Champion" className="Champion champ-slot champ-1 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Blue Team 2nd Champion" className="Champion champ-slot champ-2 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Blue Team 3rd Champion" className="Champion champ-slot champ-3 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Blue Team 4th Champion" className="Champion champ-slot champ-4 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Blue Team 5th Champion" className="Champion champ-slot champ-5 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Blue Team 6th Champion" className="Champion champ-slot champ-6 blue" src="Utilities/placeholder.png" onClick={championUnselect}/>
                 </div>
 
                 <div className="Tank">
@@ -115,12 +132,12 @@ function App() {
                 <div className="Composition">
                     <h3 id="Red_Compo_title">Red Team Composition</h3>
 
-                    <img alt="Red Team 1st Champion" className="Champion champ-1 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Red Team 2nd Champion" className="Champion champ-2 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Red Team 3rd Champion" className="Champion champ-3 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Red Team 4th Champion" className="Champion champ-4 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Red Team 5th Champion" className="Champion champ-5 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
-                    <img alt="Red Team 6th Champion" className="Champion champ-6 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Red Team 1st Champion" className="Champion champ-slot champ-1 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Red Team 2nd Champion" className="Champion champ-slot champ-2 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Red Team 3rd Champion" className="Champion champ-slot champ-3 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Red Team 4th Champion" className="Champion champ-slot champ-4 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Red Team 5th Champion" className="Champion champ-slot champ-5 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
+                    <img alt="Red Team 6th Champion" className="Champion champ-slot champ-6 red" src="Utilities/placeholder.png" onClick={championUnselect}/>
                 </div>
 
                 <div className="Tank">
