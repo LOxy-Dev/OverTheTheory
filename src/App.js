@@ -50,15 +50,13 @@ function championUnselect(element) {
     for (let i = 5; i>0; i--) {
         let a = slots.item(i).src;
         slots.item(i).src = last_slot_src;
+        if (last_slot_src == "Utilities/placeholder.png") slots.item(i).classList.remove("Selected"); // Remove Selected class if emmpty
         last_slot_src = a;
 
         if (element.target === slots.item(i)) {
             break;
         }
     }
-
-    // Reset
-    slots.item(0).classList.remove("Selected");
 }
 
 function App() {
