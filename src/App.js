@@ -59,6 +59,7 @@ function championUnselect(element) {
     }
 }
 
+// TODO Replace the generation of the composition tool by a dynamic one (may use a JSON file)
 function App() {
   return (
 <div className="App">
